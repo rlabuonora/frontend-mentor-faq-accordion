@@ -1,0 +1,174 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    3. Allow percentage-based heights in the application
+  */
+  html, body {
+    height: 100%;
+  }
+  /*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    6. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    7. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    8. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+
+
+body {
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-family: 'Kumbh Sans', sans-serif;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex {
+    display: flex;
+}
+
+h1 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+h2 {
+    font-size: .8em;
+    font-weight: 400;
+    
+}
+
+.img-wrap {
+    max-width: 60%;
+    margin-top: -5em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.container {
+    background-color: white;
+    width: 33ch;
+    border-radius: 1em;
+    padding-bottom: 1.5em;
+}
+
+.btn {
+    background-color: white;
+    border: 0;
+    background: url(images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    font-size: 1em;
+    width: 1em;
+    height: .5em;
+    white-space: nowrap;
+    text-indent: 10em;
+    overflow: hidden;
+    line-height: 0.1;
+}
+
+
+li > p {
+    font-size: .7em;
+    margin-top: 1em;
+    max-width: 90%;
+    color: hsl(240, 5%, 50%);
+
+}
+li > .flex {
+    justify-content: space-between;
+    align-items: baseline;
+}
+ul {
+    padding: 1em;
+}
+
+ul > li {   
+    list-style: none;
+}
+
+ul > li + li {
+    margin-top: 1em;
+}
+
+li > p {
+    display: none;
+}
+
+li.open > p {
+    display: block;
+}
+
+li.open > h2 {
+    font-weight: 800;
+}
+
+li > h2 {
+    color: hsl(240, 5%, 40%);
+}
+
+
+@media (min-width: 50em) {
+    .container {
+        display: flex;
+        width: 60%;
+        padding: 2em;
+    }
+
+    .img-wrap {
+        margin-left: -4em;
+        margin-top: 2em;
+        max-width: 100%;
+        
+        
+    }
+
+    h1 {
+        text-align: left;
+    }
+
+    ul {
+        padding: 0;
+    }
+
+
+}
