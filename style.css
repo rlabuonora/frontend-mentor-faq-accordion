@@ -52,23 +52,15 @@
   }
 
 
-
-
 body {
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   font-family: 'Kumbh Sans', sans-serif;
-  align-items: center;
-  justify-content: center;
-}
 
-.flex {
-    display: flex;
 }
 
 h1 {
     font-size: 1.5em;
-    text-align: center;
-    margin-top: 1.5em;
+   
 }
 
 h2 {
@@ -77,19 +69,8 @@ h2 {
     
 }
 
-.img-wrap {
-    max-width: 60%;
-    margin-top: -5em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-.container {
-    background-color: white;
-    width: 33ch;
-    border-radius: 1em;
-    padding-bottom: 1.5em;
+.col-1, .col-2 {
+    flex: 1;
 }
 
 .btn {
@@ -104,22 +85,43 @@ h2 {
     text-indent: 10em;
     overflow: hidden;
     line-height: 0.1;
+    cursor: pointer;
 }
 
 
 li > p {
     font-size: .7em;
     margin-top: 1em;
-    max-width: 90%;
     color: hsl(240, 5%, 50%);
 
 }
-li > .flex {
+
+.flex {
+    display: flex;
+
+}
+
+body.flex {
+    justify-content: center;
+    align-items: center;
+}
+
+h2.flex {
     justify-content: space-between;
     align-items: baseline;
 }
+
+.container {
+    display: flex;
+    min-width: 60%;
+    max-width: 80%;
+    height: 70%;
+    background-color: white;
+    border-radius: 1em;
+    padding: 6em 3em 4em;
+}
 ul {
-    padding: 1em;
+    padding: 1em 1em 1em 0;
 }
 
 ul > li {   
@@ -147,28 +149,53 @@ li > h2 {
 }
 
 
-@media (min-width: 50em) {
+img {
+    width: 350px;
+}
+
+.img-wrap {
+    margin-left: -8em;
+}
+
+
+@media (max-width: 80em) {
     .container {
-        display: flex;
-        width: 60%;
-        padding: 2em;
+        flex-direction: column;
+        padding: 0;
+        height: 500px;
+        min-width: 400px;
+        max-width: 40px;
+        
     }
 
+    img {
+        width: 50%;
+        margin: -6em auto 1em auto;
+    }
     .img-wrap {
-        margin-left: -4em;
-        margin-top: 2em;
-        max-width: 100%;
-        
-        
-    }
-
-    h1 {
-        text-align: left;
+        margin: 0;  
     }
 
     ul {
         padding: 0;
+        margin-top: 1em;
+    }
+
+    h2 > button {
+        margin-left: 1.5em;
+    }
+
+    .col-1, .col-2 {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items:  center;
+    }
+
+    .col-2 {
+        flex-grow: 6;
     }
 
 
 }
+
