@@ -104,6 +104,7 @@ li > p {
 body.flex {
     justify-content: center;
     align-items: center;
+    padding: 1em;
 }
 
 h2.flex {
@@ -114,7 +115,7 @@ h2.flex {
 .container {
     display: flex;
     width: 750px;
-    height: 70%;
+    height: 375px;
     background-color: white;
     border-radius: 1em;
     padding: 4em 3em 4em;
@@ -164,14 +165,12 @@ li.open > p {
 @media (max-width: 40em) {
 
     body {
-        padding-top: 1em;
+        padding-top: 2em;
     }
     .container {
         flex-direction: column;
         padding: 1em 2em;
         max-width: 350px;
-        height: 450px;
-        
     }
 
     img {
