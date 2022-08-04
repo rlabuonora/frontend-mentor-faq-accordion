@@ -113,12 +113,11 @@ h2.flex {
 
 .container {
     display: flex;
-    min-width: 60%;
-    max-width: 80%;
+    width: 750px;
     height: 70%;
     background-color: white;
     border-radius: 1em;
-    padding: 6em 3em 4em;
+    padding: 4em 3em 4em;
 }
 ul {
     padding: 1em 1em 1em 0;
@@ -157,20 +156,27 @@ img {
     margin-left: -8em;
 }
 
+li.open > p {
+  max-width: 80%;
+}
 
-@media (max-width: 80em) {
+
+@media (max-width: 40em) {
+
+    body {
+        padding-top: 1em;
+    }
     .container {
         flex-direction: column;
-        padding: 0;
-        height: 500px;
-        min-width: 400px;
-        max-width: 40px;
+        padding: 1em 2em;
+        max-width: 350px;
+        height: 450px;
         
     }
 
     img {
         width: 50%;
-        margin: -6em auto 1em auto;
+        margin: -5em auto 1em auto;
     }
     .img-wrap {
         margin: 0;  
@@ -187,14 +193,28 @@ img {
 
     .col-1, .col-2 {
         display: flex;
-        justify-content: center;
         flex-direction: column;
-        align-items:  center;
+        /* align-items:  center; */
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .col-1 {
+        height: 200px;
+        flex-grow: 0;
+        justify-content: center;
     }
 
     .col-2 {
-        flex-grow: 6;
+        margin-top: 1em;
     }
+
+    li.open > p {
+        max-width: 90%;
+    }
+
 
 
 }

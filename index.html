@@ -102,14 +102,23 @@
 
   <script>
 const btns = Array.from(document.querySelectorAll('.btn'));
-console.log(btns);
 btns.forEach(function(btn) {
-  console.log(btn);
   btn.addEventListener('click', function(e) {
-  // Adds clicked class to button
-    this.closest("li").classList.toggle("open");
-    console.log(this.closest("li"));
-})
+    e.preventDefault();
+    var openElt =  document.querySelector(".open");
+    var toOpenElt = this.closest("li");
+    if (openElt === toOpenElt) {
+      openElt.classList.toggle("open");
+    } else if (openElt === null) {
+      toOpenElt.classList.add("open");
+    } else {
+      openElt.classList.remove("open");
+      toOpenElt.classList.add("open");
+    }
+  
+
+
+  })
 });
 
   </script>
